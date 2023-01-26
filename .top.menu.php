@@ -41,6 +41,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array("CLASS_STYLE"=>"color-green"), 
 		"" 
+	),
+	Array(
+		"Опросы", 
+		"/ask/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
