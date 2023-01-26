@@ -135,12 +135,15 @@ IncludeTemplateLangFile(__FILE__);
                     <!-- /side menu -->
                 <? endif; ?>
                 <!-- side anonse -->
-                <div class="side-block side-anonse">
-                    <div class="title-block"><span class="i i-title01"></span>Полезная информация!</div>
-                    <div class="item">
-                        <p>Клиенты предпочитают все больше эко-материалов.</p>
-                    </div>
-                </div>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "include_info1",
+                    Array(
+                        "AREA_FILE_SHOW" => "page",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => ""
+                    )
+                );?><br>
                 <!-- /side anonse -->
 
                 <!-- side wrap -->
