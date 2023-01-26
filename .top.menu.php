@@ -1,7 +1,7 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"", 
+		"Главная", 
 		"/", 
 		Array(), 
 		Array(), 
@@ -11,7 +11,7 @@ $aMenuLinks = Array(
 		"Компания", 
 		"company/", 
 		Array(), 
-		Array(), 
+		Array("CLASS_STYLE"=>"color-red"), 
 		"" 
 	),
 	Array(
@@ -39,7 +39,7 @@ $aMenuLinks = Array(
 		"Партнёрам", 
 		"/partnyeram/", 
 		Array(), 
-		Array(), 
+		Array("CLASS_STYLE"=>"color-green"), 
 		"" 
 	)
 );

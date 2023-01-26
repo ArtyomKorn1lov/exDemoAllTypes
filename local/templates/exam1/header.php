@@ -28,7 +28,7 @@ IncludeTemplateLangFile(__FILE__);
             <div class="logo-block"><a href="" class="logo">Мебельный магазин</a>
             </div>
             <div class="main-phone-block">
-                <? if (DateIsBetween(date("Y-m-d 09:00:00"), date("Y-m-d 18:00:00"), date("Y-m-d G:i:s"))) { ?>
+                <? if (user_classes\UserModuleForExecuteTaskEx1Demo1::DateIsBetween()) { ?>
                     <a href="tel:84952128506" class="phone">8 (495) 212-85-06</a>
                 <? } else { ?>
                     <a href="mailto:store@store.ru" class="phone">store@store.ru</a>

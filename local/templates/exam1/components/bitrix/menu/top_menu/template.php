@@ -2,6 +2,7 @@
 
 <?if (!empty($arResult)):?>
 
+    <?//user_classes\UserModuleForExecuteTaskEx1Demo1::Dump($arResult)?>
 <nav class="nav">
     <div class="inner-wrap">
         <div class="menu-block popup-wrap">
@@ -19,7 +20,17 @@ foreach($arResult as $arItem):?>
 	<?if ($arItem["IS_PARENT"]):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li <?if ($arItem["LINK"] == "/" ):?> class="main-page" <?endif?>><a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
+
+            <?
+                $classStyle = "";
+
+                if(isset($arItem["PARAMS"]["CLASS_STYLE"])) {
+                    $classStyle = $arItem["PARAMS"]["CLASS_STYLE"];
+                }
+
+            ?>
+
+			<li <?if ($arItem["LINK"] == "/" ):?> class="main-page" <?endif?>><a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?> <?=$classStyle?>"><?=$arItem["TEXT"]?></a>
 				<ul>
 		<?else:?>
 			<li<?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><a href="<?=$arItem["LINK"]?>" class="parent"><?=$arItem["TEXT"]?></a>
